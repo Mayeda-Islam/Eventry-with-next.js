@@ -29,7 +29,7 @@ const EventCard = () => {
 
         {/* <!-- Buttons --> */}
 
-        <EventAction fromDetails={true} />
+        <EventAction />
       </div>
     </div>
   );
