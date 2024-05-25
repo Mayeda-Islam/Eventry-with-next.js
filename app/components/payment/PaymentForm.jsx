@@ -6,7 +6,7 @@ const PaymentForm = () => {
       <h2 class="font-bold text-xl mb-8">Payment Details</h2>
       <form>
         <div class="my-4 space-y-2">
-          <label for="name" class="block">
+          <label htmlFor="name" class="block">
             Name
           </label>
           <input

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
-const EventDetails = () => {
+const EventDetails = ({ details, swags }) => {
   return (
     <div className="col-span-3">
       <div className="w-full h-full bg-[#242526] p-6 rounded-lg">
