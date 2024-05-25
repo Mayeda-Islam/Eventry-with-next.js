@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import EventAction from "./EventAction";
 
-const EventCard = () => {
+const EventCard = ({}) => {
   return (
     <div className="overflow-hidden rounded-md bg-[#242526]">
       <Image
