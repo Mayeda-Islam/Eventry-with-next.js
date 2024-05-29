@@ -12,6 +12,7 @@ export async function getAllEvents() {
   return replaceMongoIdInArray(allEvents);
 }
 export async function getEventById(id) {
+  console.log(object);
   const event = await eventModel.findById(id);
   return replaceMongoIdInObject(event);
 }
@@ -26,3 +27,15 @@ export async function findUserByCredentials(credentials) {
   }
   return null;
 }
+export const updateInterest = async (eventId, authId) => {
+  const event = await eventModel.findById(eventId);
+  if (event) {
+    const foundUsers = event.interested_ids.find((id) => id == authId);
+    if (foundUsers) {
+      event.interested_ids = event.interested_ids.filter((id) => id != authId);
+    } else {
+      event.interested_ids.push(authId);
+    }
+    await event.save();
+  }
+};

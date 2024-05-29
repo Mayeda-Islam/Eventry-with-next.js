@@ -3,7 +3,7 @@ import React from "react";
 import EventAction from "../landing/EventAction";
 
 const HeroSection = ({ eventDetails }) => {
-  console.log(eventDetails);
+  console.log(eventDetails.id);
   return (
     <section class="container">
       <div class="bg-gradient-to-b from-slate-200/20 to-slate-800/30">
@@ -27,7 +27,11 @@ const HeroSection = ({ eventDetails }) => {
           </div>
         </div>
 
-        <EventAction fromDetails={true} />
+        <EventAction
+          eventId={eventDetails?.id}
+          interestedIds={eventDetails?.interested_ids}
+          fromDetails={true}
+        />
       </div>
     </section>
   );

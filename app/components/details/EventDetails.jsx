@@ -2,7 +2,6 @@
 import React from "react";
 
 const EventDetails = ({ details, swags }) => {
-  console.log(details);
   return (
     <div className="col-span-3">
       <div className="w-full h-full bg-[#242526] p-6 rounded-lg">
